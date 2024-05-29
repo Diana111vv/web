@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <center>
+                <li><a href="#name" onclick="openHome()">Главная</a></li>
+                <li><a href="#real_estate" onclick="openRealEstatePage()">Недвижимость</a></li>
+                <li><a href="#company" onclick="openCompany()">О компании</a></li>
+                <li><a href="#partners" onclick="openParthners()">Стать партнёром</a></li>
+                <li><a href="#team" onclick="openTeam()">Наша команда</a></li>
+                <li><a href="#login" onclick="openAuthorization()">Войти</a></li>
+            </center><br>
+        </ul>
+    </nav>
+    <div class="contacts">
+        <h2>Наши контакты:</h2>
+        <p>Адрес: Цветной бульвар, Москва, Россия</p>
+        <p>Телефон: +7-905-333-55-55</p>
+        <p>Email: <a href="mailto:centure21@gmail.com">centure21@gmail.com</a></p>
+    </div>
+    <script type="text/javascript">
+        function openHome() {
+            window.location.href = "index.html";
+        }
+        function openRealEstatePage() {
+            window.location.href = "real_estate.html";
+        }
+        function openAuthorization() {
+            window.location.href = "authorization.html";
+        }
+        function openNews() {
+            window.location.href = "news.html";
+        }
+        function openParthners() {
+            window.location.href = "parthners.html";
+        }
+        function openCompany() {
+            window.location.href = "company.html";
+        }
+        function openTeam() {
+            window.location.href = "team.html";
+        }
+        showSlides();
+    </script>
+</body>
+</html>

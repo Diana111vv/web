@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <center>
+                <li><a href="#name" onclick="openHome()">Главная</a></li>
+                <li><a href="#real_estate" onclick="openRealEstatePage()">Недвижимость</a></li>
+                <li><a href="#company" onclick="openCompany()">О компании</a></li>
+                <li><a href="#partners" onclick="openParthners()">Стать партнёром</a></li>
+                <li><a href="#login" onclick="openAuthorization()">Войти</a></li>
+            </center><br>
+        </ul>
+    </nav>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="static/image1.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image2.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image3.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image4.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image5.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image6.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image7.jpg">
+        </div>
+        <div class="mySlides fade">
+            <img src="static/image8.jpg">
+        </div>
+    </div>
+    <div class="text1" style="top: 90%; left: 50%; right: 30%;">
+
+<form method="POST">
+  <div class="container">
+    <label for="Login"><b>Логин</b></label>
+    <input type="text" placeholder="" name="Login" required>
+
+    <label for="Password"><b>Пароль</b></label>
+    <input type="password" placeholder="" name="Password" required>
+
+    <label for="name"><b>Имя</b></label>
+    <input type="name" placeholder="" name="name" required>
+
+    <label for="email"><b>Почта</b></label>
+    <input type="email" placeholder="" name="email" required>
+
+    <label for="phone"><b>Телефон</b></label>
+    <input type="phone" placeholder="" name="phone" required>
+
+    <button type="submit">Зарегистрироваться</button>
+  </div>
+</form>
+
+
+    <div class="contacts">
+        <h2>Наши контакты:</h2>
+        <p>Адрес: Цветной бульвар, Москва, Россия</p>
+        <p>Телефон: +7-905-333-55-55</p>
+        <p>Email: <a href="mailto:centure21@gmail.com">centure21@gmail.com</a></p>
+    </div>
+
+    <script type="text/javascript">
+        let slideIndex = 0;
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Изменяйте значение таймера для скорости переключения
+        }
+        function openHome() {
+            window.location.href = "index.html";
+        }
+        function openRealEstatePage() {
+            window.location.href = "real_estate.html";
+        }
+        function openAuthorization() {
+            window.location.href = "authorization.html";
+        }
+        function openParthners() {
+            window.location.href = "parthners.html";
+        }
+        function openCompany() {
+            window.location.href = "company.html";
+        }
+        function openReg() {
+            window.location.href = "registration.html";
+        }
+        showSlides();
+    </script>
+</body>
+</html>

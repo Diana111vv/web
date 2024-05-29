@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Недвижимость</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <center>
+                <li><a href="#name" onclick="openHome()">Главная</a></li>
+                <li><a href="#real_estate" onclick="openRealEstatePage()">Недвижимость</a></li>
+                <li><a href="#company" onclick="openCompany()">О компании</a></li>
+                <li><a href="#partners" onclick="openParthners()">Стать партнёром</a></li>
+                <li><a href="#login" onclick="openAuthorization()">Войти</a></li>
+            </center><br>
+        </ul>
+    </nav>
+
+    <div id="image-container">
+        <img id="current-image" src="static/image19.png" onclick="toggleFullscreen()">
+    </div>
+    <button type="button" id="next-button">></button>
+    <button type="button" id="prev-button"><</button>
+
+    <div class="textre_1">
+        <p><u><b>121 637 €</b></u></p>
+        <p>Однокомнатная квартира &nbsp&nbsp&nbsp&nbspДубай, ОАЭ</p>
+    </div>
+
+    <div class="tre_1">
+        <p>&nbsp<u><b>Основные характеристики:</b></u></p>
+    </div>
+
+    <div class="features_1">
+        &nbsp Цена продажи <br><br>
+        &nbsp Цена за кв.м.	3 334.75 € <br><br>
+        &nbsp Площадь	37 м2 <br><br>
+        &nbsp Этаж	17 <br><br>
+        &nbsp Этажность	17 <br><br>
+        &nbsp Всего комнат	1 <br><br>
+        &nbsp Стадия строительства Строящийся объект <br><br>
+        &nbsp Срок сдачи	2023 <br><br>
+        &nbsp Адрес ОАЭ, Дубай, ALEXIS TOWER - Downtown Street<br><br>
+        <hr>
+    </div>
+    <div class="tre_1">
+        <p><u><b>Описание</b></u></p>
+    </div>
+    <div class="features_1">
+        &nbsp Alexis Tower – это новый проект современного 17-этажного жилого комплекса, разработанный крупным застройщиком Reportage Properties. Комплекс расположен в одном из популярных деловых районов Дубая Jebel Ali.<br><br>
+        &nbsp Во всех квартирах есть: <br><br>
+        &nbsp- кухонные гарнитуры со столешницами и бытовой техникой;<br><br>
+        &nbsp- полностью обустроенные ванные комнаты;<br><br>
+        &nbsp- окна с двойным остеклением;<br><br>
+        &nbsp- полы покрыты керамической плиткой;<br><br>
+        &nbsp- центральное кондиционирование, высокоскоростной интернет и телевидение DU.<br><br>
+        &nbspЛокация:<br><br>
+        &nbsp- Станция метро UAE Exchange, а также автобусные остановки Globalink Westar Shipping Company и UAE Exchange Metro Bus Stop - 5 мин ходьбы.<br><br>
+        &nbsp- Пристань для яхт - 10 мин на авто.<br><br>
+        &nbsp- Вертолетная площадка и порт Jebel Ali - 20 мин на авто.<br><br>
+        &nbsp- Международный аэропорт Al Maktoum - 25 мин на авто.<br><br>
+        &nbsp- Международный аэропорт Дубая - 35 мин на авто.<br><br>
+        &nbspЗвоните или пишите, проконсультируем бесплатно, расскажем все о самых выгодных объектах зарубежной недвижимости!<br><br><hr>
+    </div>
+
+    <div class="contacts">
+        <h2>Наши контакты:</h2>
+        <p>Адрес: Цветной бульвар, Москва, Россия</p>
+        <p>Телефон: +7-905-333-55-55</p>
+        <p>Email: <a href="mailto:centure21@gmail.com">centure21@gmail.com</a></p>
+    </div>
+
+<script type="text/javascript">
+
+    const imageContainer = document.getElementById('image-container');
+    const currentImage = document.getElementById('current-image');
+    const nextButton = document.getElementById('next-button');
+    const prevButton = document.getElementById('prev-button');
+
+    // Массив с путями к изображениям
+    const images = [
+    'static/image19.png',
+    'static/image20.png',
+    'static/image21.png',
+    'static/image22.png',
+    'static/image23.png',
+    'static/image24.png',
+    'static/image25.png',
+    'static/image26.png',
+    'static/image27.png'];
+
+    // Индекс текущего изображения
+    let currentImageIndex = 0;
+
+    // Функция для перехода к следующему изображению
+    const nextImage = () => {
+      currentImageIndex++;
+
+      // Проверка выхода за пределы массива
+      if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+      }
+
+      // Обновление изображения
+      currentImage.src = images[currentImageIndex];
+    };
+
+    // Функция для перехода к предыдущему изображению
+    const prevImage = () => {
+      currentImageIndex--;
+
+      // Проверка выхода за пределы массива
+      if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+      }
+
+      // Обновление изображения
+      currentImage.src = images[currentImageIndex];
+    };
+
+    // Добавление обработчиков событий к кнопкам
+    nextButton.addEventListener('click', nextImage);
+    prevButton.addEventListener('click', prevImage);
+
+    function toggleFullscreen() {
+      currentImage.classList.toggle("fullscreen-image");
+    }
+
+        function openHome() {
+            window.location.href = "index.html";
+        }
+        function openRealEstatePage() {
+            window.location.href = "real_estate.html";
+        }
+        function openAuthorization() {
+            window.location.href = "authorization.html";
+        }
+        function openNews() {
+            window.location.href = "news.html";
+        }
+        function openParthners() {
+            window.location.href = "parthners.html";
+        }
+        function openCompany() {
+            window.location.href = "company.html";
+        }
+        function openTeam() {
+            window.location.href = "team.html";
+        }
+</script>
+</body>
+</html>

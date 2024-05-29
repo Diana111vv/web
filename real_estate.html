@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Недвижимость</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <center>
+                <li><a href="#name" onclick="openHome()">Главная</a></li>
+                <li><a href="#real_estate" onclick="openRealEstatePage()">Недвижимость</a></li>
+                <li><a href="#company" onclick="openCompany()">О компании</a></li>
+                <li><a href="#partners" onclick="openParthners()">Стать партнёром</a></li>
+                <li><a href="#login" onclick="openAuthorization()">Войти</a></li>
+            </center><br>
+        </ul>
+    </nav>
+
+    <div class="real_est">
+        <div class="r-es">
+            <a href = "re_1.html">
+            <img src="static/image19.png" alt="Real estate 1">
+            <p><u><b>121 637 €</b></u></p>
+            <p>Однокомнатная квартира в Дубае, ОАЭ</p>
+            <button onclick="addToCart(this)">+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_2.html">
+            <img src="static/image28.png" alt="Real estate 2">
+            <p><u><b>457 197 €</b></u></p>
+            <p>Двухкомнатная квартира в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_3.html">
+            <img src="static/image42.png" alt="Real estate 3">
+            <p><u><b>144 910 €</b></u></p>
+            <p>Студия в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_4.html">
+            <img src="static/image54.png" alt="Real estate 4">
+            <p><u><b>326 694 €</b></u></p>
+            <p>Апартаменты в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+    </div>
+    <div class="real_est">
+        <div class="r-es">
+            <a href = "re_5.html">
+            <img src="static/image19.png" alt="Real estate 1">
+            <p><u><b>121 637 €</b></u></p>
+            <p>Однокомнатная квартира в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_6.html">
+            <img src="static/image28.png" alt="Real estate 2">
+            <p><u><b>457 197 €</b></u></p>
+            <p>Двухкомнатная квартира в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_7.html">
+            <img src="static/image42.png" alt="Real estate 3">
+            <p><u><b>144 910 €</b></u></p>
+            <p>Студия в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_8.html">
+            <img src="static/image54.png" alt="Real estate 4">
+            <p><u><b>326 694 €</b></u></p>
+            <p>Апартаменты в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+    </div>
+    <div class="real_est">
+        <div class="r-es">
+            <a href = "re_9.html">
+            <img src="static/image19.png" alt="Real estate 1">
+            <p><u><b>121 637 €</b></u></p>
+            <p>Однокомнатная квартира в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_10.html">
+            <img src="static/image28.png" alt="Real estate 2">
+            <p><u><b>457 197 €</b></u></p>
+            <p>Двухкомнатная квартира в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_11.html">
+            <img src="static/image42.png" alt="Real estate 3">
+            <p><u><b>144 910 €</b></u></p>
+            <p>Студия в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+        <div class="r-es">
+            <a href="re_12.html">
+            <img src="static/image54.png" alt="Real estate 4">
+            <p><u><b>326 694 €</b></u></p>
+            <p>Апартаменты в Дубае, ОАЭ</p>
+            <button>+</button>
+            </a>
+        </div>
+    </div>
+    function addToCart(element) {
+  // Получаем данные о недвижимости из родительского элемента
+  const realEstate = element.parentElement;
+  const title = realEstate.querySelector("p").textContent;
+  const price = realEstate.querySelector("p").textContent;
+  const image = realEstate.querySelector("img").src;
+
+  // Создаем объект недвижимости
+  const item = {
+    title: title,
+    price: price,
+    image: image,
+  };
+
+  // Добавляем объект недвижимости в массив в базе данных
+  database.push(item);
+
+  // Выводим сообщение об успешном добавлении
+  alert("Недвижимость добавлена в корзину!");
+}
+
+    <div class="contacts">
+        <h2>Наши контакты:</h2>
+<p>Адрес: Цветной бульвар, Москва, Россия</p>
+        <p>Телефон: +7-905-333-55-55</p>
+        <p>Email: <a href="mailto:centure21@gmail.com">centure21@gmail.com</a></p>
+    </div>
+    <script type="text/javascript">
+
+        function openHome() {
+            window.location.href = "index.html";
+        }
+        function openRealEstatePage() {
+            window.location.href = "real_estate.html";
+        }
+        function openAuthorization() {
+            window.location.href = "authorization.html";
+        }
+        function openNews() {
+            window.location.href = "news.html";
+        }
+        function openParthners() {
+            window.location.href = "parthners.html";
+        }
+        function openCompany() {
+            window.location.href = "company.html";
+        }
+        function openTeam() {
+            window.location.href = "team.html";
+        }
+        showSlides();
+    </script>
+</body>
+</html>
+<!--
+https://prian.ru/price/united-arab-emirates-27263-3716694.html
+https://prian.ru/price/united-arab-emirates-28060-3893956.html
+https://prian.ru/price/united-arab-emirates-25679-3800348.html
+-->

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <center>
+                <li><a href="#name" onclick="openHome()">Главная</a></li>
+                <li><a href="#real_estate" onclick="openRealEstatePage()">Недвижимость</a></li>
+                <li><a href="#company" onclick="openCompany()">О компании</a></li>
+                <li><a href="#partners" onclick="openParthners()">Стать партнёром</a></li>
+                <li><a href="#login" onclick="openAuthorization()">Войти</a></li>
+            </center><br>
+        </ul>
+    </nav>
+
+    <div class="team">
+        <div class="team-member">
+            <img src="static/image9.png" alt="Person 1">
+            <p><u><b>Анна Касатова</b></u></p>
+            <p>Владелец</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image10.png" alt="Person 2">
+            <p><u><b>Ольга Миронова</b></u></p>
+            <p>Помощник директора</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image11.png" alt="Person 3">
+            <p><u><b>Андрей Комаров</b></u></p>
+            <p>Старший консультант</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image12.png" alt="Person 4">
+            <p><u><b>Ксения Матвеева</b></u></p>
+            <p>Финансовый консультант</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image13.png" alt="Person 5">
+            <p><u><b>Юлия Парфенова</b></u></p>
+            <p>Эксперт по продажам</p>
+        </div>
+    </div>
+    <div class="team">
+        <div class="team-member">
+            <img src="static/image14.png" alt="Person 6">
+            <p><u><b>Владислав Андреев</b></u></p>
+            <p>Эксперт по аренде</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image15.png" alt="Person 7">
+            <p><u><b>Алиса Попова</b></u></p>
+            <p>Юрист</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image16.png" alt="Person 8">
+            <p><u><b>Константин Егоров</b></u></p>
+            <p>Координатор заявок</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image17.png" alt="Person 9">
+            <p><u><b>Наталия Веселова</b></u></p>
+            <p>HR Директор</p>
+        </div>
+        <div class="team-member">
+            <img src="static/image18.png" alt="Person 10">
+            <p><u><b>Евгений Макаров</b></u></p>
+            <p>Специалист по недвижимости</p>
+        </div>
+    </div>
+
+    <div class="contacts">
+        <h2>Наши контакты:</h2>
+        <p>Адрес: Цветной бульвар, Москва, Россия</p>
+        <p>Телефон: +7-905-333-55-55</p>
+        <p>Email: <a href="mailto:centure21@gmail.com">centure21@gmail.com</a></p>
+    </div>
+    <script type="text/javascript">
+        function openHome() {
+            window.location.href = "index.html";
+        }
+        function openRealEstatePage() {
+            window.location.href = "real_estate.html";
+        }
+        function openAuthorization() {
+            window.location.href = "authorization.html";
+        }
+        function openNews() {
+            window.location.href = "news.html";
+        }
+        function openParthners() {
+            window.location.href = "parthners.html";
+        }
+        function openCompany() {
+            window.location.href = "company.html";
+        }
+        function openTeam() {
+            window.location.href = "team.html";
+        }
+        showSlides();
+    </script>
+</body>
+</html>
